@@ -53,9 +53,9 @@ function upgradeClick() {
     if (money >= 10 + (1 * clickLevel) {
         money -= 10 + (1 * clickLevel);
         clickDamage += 5;
+        clickLevel = clickLevel + 1;
         document.getElementById("money").innerHTML = money;
         document.getElementById("clickDamage").innerHTML = clickDamage;
-        clickLevel = clickLevel + 1;
     }
 }
 
@@ -63,8 +63,8 @@ function upgradePassive() {
     if (money >= 100 + (5 * passiveLevel) {
         money -= 100 + (5 * passiveLevel);
         passiveDamage = (passiveDamage * 1.1) + 10;
+        autoLevel = autoLevel + 1;
         document.getElementById("money").innerHTML = money;
         document.getElementById("passiveDamage").innerHTML = passiveDamage;
-        autoLevel = autoLevel + 1;
     }
 }
