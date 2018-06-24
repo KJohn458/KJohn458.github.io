@@ -61,7 +61,7 @@ function upgradeClick() {
 
 function upgradePassive() {
     if (money >= 100 + (5 * passiveLevel)) {
-        money -= 100 + (5 * passiveLevel))\;
+        money -= 100 + (5 * passiveLevel)\;
         passiveDamage = (passiveDamage * 1.1) + 10;
         autoLevel = autoLevel + 1;
         document.getElementById("money").innerHTML = money;
