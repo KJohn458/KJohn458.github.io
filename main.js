@@ -50,7 +50,7 @@ function doPassiveDamage() {
 }
 
 function upgradeClick() {
-    if (money >= 10 + (1*clickLevel) {
+    if (money >= 10 + (1 * clickLevel) {
         money -= 10 + (1*clickLevel);
         clickDamage += 5;
         document.getElementById("money").innerHTML = money;
