@@ -6,6 +6,8 @@ var passiveDamage = 0;
 var clickUpgradePrice = 10;
 var passiveUpgradePrice = 10;
 var monsterHealth = 10;
+var clickLevel = 0;
+var autoLevel = 0;
 
 //Monster takes given damage, sets monsterHealth to 0 if negative, and then updates the game
 function damageMonster(damageToTake) {
@@ -48,19 +50,21 @@ function doPassiveDamage() {
 }
 
 function upgradeClick() {
-    if (money >= 10) {
-        money -= 10;
+    if (money >= 10 + (1*clickLevel) {
+        money -= 10 + (1*clickLevel);
         clickDamage += 5;
         document.getElementById("money").innerHTML = money;
         document.getElementById("clickDamage").innerHTML = clickDamage;
+        clickLevel++;
     }
 }
 
 function upgradePassive() {
-    if (money >= 100) {
-        money -= 100;
+    if (money >= 100 + (5 * passiveLevel) {
+        money -= 100 + (5 * passiveLevel);
         passiveDamage = (passiveDamage * 1.1) + 10;
         document.getElementById("money").innerHTML = money;
         document.getElementById("passiveDamage").innerHTML = passiveDamage;
+        autoLevel++;
     }
 }
