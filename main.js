@@ -57,6 +57,7 @@ function upgradeClick() {
         document.getElementById("clickUpgradePrice").innerHTML = 10 + (1 * clickLevel);
         document.getElementById("money").innerHTML = money;
         document.getElementById("clickDamage").innerHTML = clickDamage;
+        document.getElementById("clickLevel").innerHTML = clickLevel;
     }
 }
 
@@ -68,5 +69,6 @@ function upgradePassive() {
         document.getElementById("passiveUpgradePrice").innerHTML = 100 + (5 * autoLevel);
         document.getElementById("money").innerHTML = money;
         document.getElementById("passiveDamage").innerHTML = passiveDamage;
+        document.getElementById("autoLevel").innerHTML = autoLevel;
     }
 }
