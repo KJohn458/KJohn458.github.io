@@ -38,7 +38,7 @@ function generateMonster(level) {
 
 //When the page is fully loaded, passive damage will start being done to the monster (if passiveDamage > 0)
 window.onload = function () {
-    setInterval(doPassiveDamage, 100);
+    setInterval(doPassiveDamage, 1000);
 }
 
 /*This is a helperfunction that allows setInterval (see above) to properly apply passive damage every
@@ -46,7 +46,7 @@ window.onload = function () {
 https://stackoverflow.com/questions/10182714/why-does-the-setinterval-callback-execute-only-once */
 
 function doPassiveDamage() {
-    damageMonster(passiveDamage / 10);
+    damageMonster(passiveDamage);
 }
 
 function upgradeClick() {
