@@ -26,7 +26,7 @@ function updateMonsterAndLevel() {
         document.getElementById("level").innerHTML = level;
         document.getElementById("money").innerHTML = money;
     }
-    document.getElementById("monsterHealth").innerHTML = monsterHealth;
+    document.getElementById("monsterHealth").innerHTML = Math.floor(monsterHealth);
 }
 
 //New monsters have health based on the level
