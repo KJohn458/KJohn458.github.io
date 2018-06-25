@@ -73,7 +73,7 @@ function upgradePassive() {
         passiveDamage = (passiveDamage * 1.1) + 10;
         passiveLevel++;
 
-        document.getElementById("passiveUpgradePrice").innerHTML = passiveUpgradePrice;
+        document.getElementById("passiveUpgradePrice").innerHTML = passiveUpgradePrice + 5; //Next passiveUpgradePrice
         document.getElementById("money").innerHTML = money;
         document.getElementById("passiveDamage").innerHTML = Math.floor(passiveDamage);
         document.getElementById("passiveLevel").innerHTML = passiveLevel;
