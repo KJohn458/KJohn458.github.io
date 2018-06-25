@@ -57,7 +57,7 @@ function upgradeClick() {
         clickDamage += 5;
         clickLevel++;
 
-        document.getElementById("clickUpgradePrice").innerHTML = clickUpgradePrice;
+        document.getElementById("clickUpgradePrice").innerHTML = clickUpgradePrice + 1; //Next clickUpgradePrice
         document.getElementById("money").innerHTML = money;
         document.getElementById("clickDamage").innerHTML = clickDamage;
         document.getElementById("clickLevel").innerHTML = clickLevel;
