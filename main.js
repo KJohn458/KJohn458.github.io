@@ -3,11 +3,9 @@ var level = 1;
 var money = 0;
 var clickDamage = 10;
 var passiveDamage = 0;
-var clickUpgradePrice = 10;
-var passiveUpgradePrice = 10;
 var monsterHealth = 10;
 var clickLevel = 0;
-var autoLevel = 0;
+var passiveLevel = 0;
 
 //Monster takes given damage, sets monsterHealth to 0 if negative, and then updates the game
 function damageMonster(damageToTake) {
@@ -46,16 +44,20 @@ window.onload = function () {
 https://stackoverflow.com/questions/10182714/why-does-the-setinterval-callback-execute-only-once */
 
 function doPassiveDamage() {
-    console.log(passiveDamage + " damage done!")
+    console.log(passiveDamage / 10 + " damage done!")
     damageMonster(passiveDamage / 10);
 }
 
 function upgradeClick() {
-    if (money >= 10 + (1 * clickLevel)) {
-        money -= 10 + (1 * clickLevel);
+
+    var clickUpgradePrice = 10 + clickLevel;
+
+    if (money >= clickUpgradePrice) {
+        money -= clickUpgradePrice;
         clickDamage += 5;
         clickLevel++;
-        document.getElementById("clickUpgradePrice").innerHTML = 10 + (1 * clickLevel);
+
+        document.getElementById("clickUpgradePrice").innerHTML = clickUpgradePrice;
         document.getElementById("money").innerHTML = money;
         document.getElementById("clickDamage").innerHTML = clickDamage;
         document.getElementById("clickLevel").innerHTML = clickLevel;
@@ -63,11 +65,15 @@ function upgradeClick() {
 }
 
 function upgradePassive() {
-    if (money >= 100 + (5 * autoLevel)) {
-        money -= 100 + (5 * autoLevel);
+
+    var passiveUpgradePrice = 100 + (5 * passiveLevel);
+    
+    if (money >= passiveUpgradePrice) {
+        money -= passiveUpgradePrice;
         passiveDamage = (passiveDamage * 1.1) + 10;
         autoLevel++;
-        document.getElementById("passiveUpgradePrice").innerHTML = 100 + (5 * autoLevel);
+
+        document.getElementById("passiveUpgradePrice").innerHTML = passiveUpgradePrice;
         document.getElementById("money").innerHTML = money;
         document.getElementById("passiveDamage").innerHTML = passiveDamage;
         document.getElementById("autoLevel").innerHTML = autoLevel;
