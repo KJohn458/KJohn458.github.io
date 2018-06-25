@@ -76,6 +76,6 @@ function upgradePassive() {
         document.getElementById("passiveUpgradePrice").innerHTML = passiveUpgradePrice;
         document.getElementById("money").innerHTML = money;
         document.getElementById("passiveDamage").innerHTML = passiveDamage;
-        document.getElementById("autoLevel").innerHTML = autoLevel;
+        document.getElementById("autoLevel").innerHTML = passiveLevel;
     }
 }
