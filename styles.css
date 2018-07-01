@@ -1,0 +1,77 @@
+body{
+  font: 15px/1.5 Arial, Helvetica, Sans-serif;
+  padding:0;
+  margin:0;
+  background-color:#0E0916;
+}
+
+/* Global */
+
+.container{
+  width:90%;
+  margin:auto;
+  overflow:hidden;
+}
+
+button{
+  height:30px;
+  background:#825FBE;
+  border:0;
+  text-align:center;
+}
+
+/* Header */
+
+header{
+  background-color:#3C2760;
+  padding-top:30px;
+  min-height:70px;
+  border-bottom:#825FBE 3px solid;
+}
+
+header h1{
+  margin:0;
+}
+
+/* Main */
+
+main{
+  background-color:#6844A7;
+  border-bottom:#825FBE 3px solid;
+  min-height:400px;
+}
+
+main #game-info{
+  float: left;
+  width:50%;
+}
+
+#game-info #click-info{
+  width:50%;
+  float:left;
+  padding:0;
+}
+
+#game-info #passive-info{
+  width:50%;
+  float:right;
+  padding:0;
+}
+
+main #monster{
+  float:right;
+  width:40%;
+}
+
+/* Footer */
+
+footer{
+  background-color:#3C2760;
+  padding-top:30px;
+  min-height:70px;
+
+}
+
+footer h2{
+  margin:0;
+}
